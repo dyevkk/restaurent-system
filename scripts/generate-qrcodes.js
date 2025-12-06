@@ -5,7 +5,9 @@ import QRCode from 'qrcode';
 
 // ========== CONFIG ===========
 // Direct link to the customer ordering page
-const baseUrl = 'https://restaurent-system-jfmfvey00-dyevkks-projects.vercel.app/order?table=';
+// use QR_BASE_URL env var if present, otherwise production URL
+const baseUrl = process.env.QR_BASE_URL || 'https://restaurent-system-jfmfvey00-dyevkks-projects.vercel.app/order?table=';
+
 
 const outputDir = path.join(process.cwd(), 'public', 'qrcodes');
 
