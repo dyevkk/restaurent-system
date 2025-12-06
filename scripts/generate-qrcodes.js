@@ -5,7 +5,8 @@ import QRCode from 'qrcode';
 
 // ========== CONFIG ===========
 const outputDir = path.join(process.cwd(), 'public', 'qrcodes');
-const domain = 'https://restaurent-system-jfmfvey00-dyevkks-projects.vercel.app';
+const baseUrl = 'https://restaurent-system-jfmfvey00-dyevkks-projects.vercel.app/order?table=';
+
 
 const tables = [
   { number: 1, id: '30c51fdc-901d-4bb5-be5c-69b3ee51ce2e' },
@@ -21,7 +22,8 @@ async function ensureDir(dir) {
 async function generate() {
   await ensureDir(outputDir);
   for (const t of tables) {
-    const url = `${domain}/order?table=${t.id}`;
+    const url = `${baseUrl}${t.id}`;
+
     const fileName = `table-${t.number}.png`;
     const outPath = path.join(outputDir, fileName);
     await QRCode.toFile(outPath, url, {
