@@ -1,0 +1,71 @@
+
+  <!DOCTYPE html>
+  <html>
+  <head>
+    <meta charset="UTF-8" />
+    <style>
+      body { font-family: Arial, sans-serif; background:#f3f3f3; padding:20px; }
+      .grid { display:flex; flex-wrap:wrap; gap:20px; }
+      .card {
+        width: 300px;
+        padding: 20px;
+        background:white;
+        border-radius: 12px;
+        box-shadow:0 6px 12px rgba(0,0,0,0.1);
+        text-align:center;
+      }
+      .qr {
+        width: 220px; margin-bottom:15px;
+      }
+      .title {
+        font-size:20px;
+        font-weight:bold;
+        margin-bottom:10px;
+      }
+      .table {
+        font-size:18px;
+        font-weight:bold;
+        margin-top:10px;
+      }
+      .url {
+        font-size:12px;
+        color:#666;
+        margin-top:8px;
+        word-break: break-all;
+      }
+      @media print {
+        body { background: white; padding:0; }
+        .card { box-shadow:none; }
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Printable Table QR Cards</h1>
+    <div class="grid">
+      
+      <div class="card">
+        <div class="title">Scan to Order</div>
+        <img src="/qrcodes/table-1.png" class="qr" />
+        <div class="table">Table 1</div>
+        <div class="url">http://localhost:3000/order?table=30c51fdc-901d-4bb5-be5c-69b3ee51ce2e</div>
+      </div>
+    
+
+      <div class="card">
+        <div class="title">Scan to Order</div>
+        <img src="/qrcodes/table-2.png" class="qr" />
+        <div class="table">Table 2</div>
+        <div class="url">http://localhost:3000/order?table=8fcac40c-865f-4e26-89ea-cbc5eb764513</div>
+      </div>
+    
+
+      <div class="card">
+        <div class="title">Scan to Order</div>
+        <img src="/qrcodes/table-3.png" class="qr" />
+        <div class="table">Table 3</div>
+        <div class="url">http://localhost:3000/order?table=52e311a7-c9d4-49d8-b95c-c080b2c2b840</div>
+      </div>
+    
+    </div>
+  </body>
+  </html>
