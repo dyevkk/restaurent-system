@@ -1,31 +1,33 @@
+@"
 <!doctype html>
 <html>
 <head>
   <meta charset="utf-8"/>
   <title>QR Cards</title>
   <style>
-    body { font-family: Arial, sans-serif; padding: 20px; display: flex; flex-wrap: wrap; gap: 20px; }
-    .card { border: 1px solid #ccc; padding: 20px; border-radius: 10px; width: 260px; text-align: center; }
-    .card img { width: 220px; height: 220px; }
-    .table { margin-top: 10px; font-weight: bold; }
+    body { font-family: Arial, sans-serif; padding: 20px; display: flex; flex-wrap: wrap; gap: 20px; background:#f6f6f6; }
+    .card { border: 1px solid #ddd; padding: 18px; border-radius: 10px; width: 280px; text-align: center; background:#fff; box-shadow:0 8px 24px rgba(0,0,0,0.06); }
+    .card img { width: 220px; height: 220px; object-fit: contain; background:#fff; }
+    .table { margin-top: 10px; font-weight: bold; color:#071017; }
   </style>
 </head>
 <body>
 
   <div class="card">
-    <img src="/qrcodes/table-1.png" />
+    <img src="/qrcodes/table-1.png" alt="Table 1 QR" />
     <div class="table">Table 1</div>
   </div>
 
   <div class="card">
-    <img src="/qrcodes/table-2.png" />
+    <img src="/qrcodes/table-2.png" alt="Table 2 QR" />
     <div class="table">Table 2</div>
   </div>
 
   <div class="card">
-    <img src="/qrcodes/table-3.png" />
+    <img src="/qrcodes/table-3.png" alt="Table 3 QR" />
     <div class="table">Table 3</div>
   </div>
 
 </body>
 </html>
+"@ | Out-File -Encoding utf8 public/print-qrcards.html
